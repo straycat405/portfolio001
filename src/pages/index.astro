@@ -1,399 +1,300 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Park Dong Jin - Web Full-Stack Developer',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Skills', href: '#skills' },
+        { text: 'Biography', href: '#biography' },
+        { text: 'Projects', href: '#projects' },
+        { text: 'GitHub', href: 'https://github.com/straycat405' },
+      ]}
+      actions={[
+        {
+          text: 'Contact',
+          href: '#contact',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
 
+  <!-- Hero Section -->
   <Hero
+    id="hero"
+    title="Park Dong Jin"
+    tagline="Web Full-Stack Developer"
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', text: 'Contact Me', href: '#contact' },
+      { text: 'View Projects', href: '#projects' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
-    </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="text-primary font-semibold">Hello, I'm</span><br />
+      KH정보교육원 Java 웹 개발과정 수료 후 (주)빅팀아이앤씨에서 연구원으로 근무하며 다양한 경험을 쌓았습니다.<br /><br />
+      다양한 이력과 경험을 바탕으로 폭넓은 분야를 아우르는 도메인 지식과 업무 분야를 지니고 있습니다.
+      건축적 사고와 디자인적 감각을 베이스로 한 정량적인 설계, 합리적인 디자인을 생각합니다.
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
+  <!-- About Section -->
   <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    id="about"
+    columns={3}
     items={[
       {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        icon: 'tabler:mail',
+        callToAction: {
+          text: 'straycat405@gmail.com',
+          href: 'mailto:straycat405@gmail.com',
+        },
       },
       {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        icon: 'tabler:phone',
+        callToAction: {
+          text: '010-4167-4419',
+          href: 'tel:010-4167-4419',
+        },
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        icon: 'tabler:brand-github',
+        callToAction: {
+          target: '_blank',
+          text: 'github.com/straycat405',
+          href: 'https://github.com/straycat405',
+        },
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-primary">About</span> Me
+      </h2>
+      <p class="mb-4">
+        협업을 통한 의사소통과 프로젝트의 주안점에 대해 항상 신경쓰고 있습니다.
+      </p>
+      <p class="mb-4">
+        듣고 배우는것보다, 직접 해보면서 부딪히는 것이 가장 큰 자산임을 체험했습니다.
+        개발자는 공부와 발전을 멈춰선 안된다는 교훈을 항상 마음에 새기고 있습니다.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-zinc-900/50"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
+  <!-- Skills Section -->
+  <Features3
+    id="skills"
+    title="Skills"
+    subtitle="다양한 기술 스택을 활용하여 풀스택 개발을 수행합니다."
+    columns={4}
+    defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Front-End',
+        description: 'Javascript, React, JSP, HTML5, Bootstrap, TailwindCSS, jQuery, Ajax, Axios',
+        icon: 'tabler:browser',
       },
       {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+        title: 'Back-End',
+        description: 'Java, Gradle, Maven, MyBatis, JPA, Spring, Apache',
+        icon: 'tabler:server',
       },
       {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+        title: 'Database',
+        description: 'PostgreSQL, MySQL, Supabase, OracleDB, MariaDB',
+        icon: 'tabler:database',
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Etc',
+        description: 'Git, SVN, Notion, Redmine, Windows OS, Mac OS, JBoss, WildFly',
+        icon: 'tabler:tools',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
+  />
+
+  <!-- Biography Section -->
+  <Steps
+    id="biography"
+    title="Biography"
+    subtitle="경력 및 학력 사항"
+    items={[
+      {
+        title: '(주)Bigteam INC <br /> <span class="font-normal text-muted">융합기술사업팀 연구원 - 응용SW개발</span> <br /> <span class="text-sm font-normal text-primary">2024.09 - 2025.06</span>',
+        description: `표준프레임워크 웹사이트 유지보수 · Java Spring 백엔드 개발 · LLM 챗봇 프론트엔드 개발 · 기타 제안사업 목업페이지 담당 (Figma)`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'KH정보교육원 <br /> <span class="font-normal text-muted">공공데이터 융합 자바개발자 양성과정 수료</span> <br /> <span class="text-sm font-normal text-primary">2023.11 - 2024.04</span>',
+        description: `팀프로젝트 웹 가계부 개발 - 팀장`,
+        icon: 'tabler:certificate',
+      },
+      {
+        title: '서울사이버대학교 <br /> <span class="font-normal text-muted">대학 총무업무 / 공사감독 / 각종 도면 작업 외</span> <br /> <span class="text-sm font-normal text-primary">2023.02 - 2023.11</span>',
+        description: `시설 관리 및 도면 작업 담당`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: '건국대학교 <br /> <span class="font-normal text-muted">건축학부 졸업 (학사편입)</span> <br /> <span class="text-sm font-normal text-primary">2020.03 - 2022.02</span>',
+        description: `건축 설계 및 디자인 전공`,
+        icon: 'tabler:school',
+      },
+      {
+        title: '(주)라이브플랜 <br /> <span class="font-normal text-muted">3dsmax 건축 모델링 및 2d 리터칭 작업</span> <br /> <span class="text-sm font-normal text-primary">2018.01 - 2019.04</span>',
+        description: `건축 시각화 작업`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: '서울예술대학교 <br /> <span class="font-normal text-muted">실내디자인과 졸업</span> <br /> <span class="text-sm font-normal text-primary">2012.03 - 2018.02</span>',
+        description: `실내 디자인 전공`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Projects Section -->
+  <Content
+    id="projects"
+    isReversed
+    items={[
+      {
+        title: 'Summary',
+        description: 'KH정보교육원 수요 팀프로젝트 · 팀 리더로 작업 총괄 · AWS EC2 서버 개발 및 구동 · 기본 회원/소셜 로그인 연동/관리자 기능 구현 · 휴대폰 문자 인증 기능',
+      },
+      {
+        title: 'Tech Stack',
+        description: 'Back-End: Java Spring, Mybatis, MySQL | Front-End: React, JS, TailwindCSS',
+      },
+    ]}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-primary">PROJECT 001</span> <span class="text-sm text-muted">2024.01 - 2024.04</span>
+        <br /><span class="text-xl">웹 가계부 서비스 (WFL)</span>
+      </h3>
+    </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-zinc-900/50"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    isAfterContent
+    isAfterContent={true}
     items={[
       {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+        title: 'Summary',
+        description: '현충시설정보서비스 웹사이트 유지보수 및 기능개발 · 국내, 해외 현충시설 DB 자료 최신화 · 구글 map API 연동을 통한 좌표 표시 · 관리자페이지 구축',
       },
       {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Tech Stack',
+        description: 'Back-End: Java Spring 표준프레임워크 4.2 | Front-End: JSP, HTML, JS | Database: PostgreSQL 16',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-primary">PROJECT 002</span> <span class="text-sm text-muted">2024.10 - 2025.01</span>
+        <br /><span class="text-xl">국가보훈부 현충시설정보서비스</span>
+      </h3>
+    </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-zinc-900/50"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+  <Content
+    isReversed
+    isAfterContent={true}
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title: 'Summary',
+        description: '데일리 이벤트를 메인으로 하는 앱 개발 · 기획 및 Figma 목업 디자인, 개발 수행 · 일반 사용자와 사업자로 구분 · 사업자는 기프티콘, 쿠폰 제작 및 발송',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Tech Stack',
+        description: 'Back-End: Java Spring, Mybatis | Front-End: JSP, jQuery, Ajax | WAS: JBoss / WildFly',
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-primary">PROJECT 003</span> <span class="text-sm text-muted">2025.01 - 2025.04</span>
+        <br /><span class="text-xl">RRamy - 알람/데일리 이벤트 앱</span>
+      </h3>
     </Fragment>
-  </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-zinc-900/50"></div>
+    </Fragment>
+  </Content>
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+  <Content
+    isReversed
+    isAfterContent={true}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        title: 'Summary',
+        description: 'LLM 기반 멀티모달 챗봇 기획 · 기초 프로세스 기획 · 제안 팸플릿 작업 · 제안발표 시연을 위한 프로토타입 개발',
       },
       {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        title: 'Tech Stack',
+        description: 'Back-End: Spring | Front-End: JSP | Database: PostgreSQL (VectorDB)',
       },
     ]}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <span class="text-primary">PROJECT 004</span> <span class="text-sm text-muted">2025.04 - 2025.06</span>
+        <br /><span class="text-xl">BTLLM - 한국은행 LLM 솔루션</span>
+      </h3>
+    </Fragment>
 
-  <!-- Stats Widget ****************** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-zinc-900/50"></div>
+    </Fragment>
+  </Content>
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
+  <!-- Contact Section -->
   <CallToAction
+    id="contact"
+    title="Contact Me"
+    subtitle="프로젝트 협업이나 채용 관련 문의를 환영합니다."
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
+        text: 'Email 보내기',
+        href: 'mailto:straycat405@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'GitHub 방문',
+        href: 'https://github.com/straycat405',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-github',
       },
     ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  />
 </Layout>
