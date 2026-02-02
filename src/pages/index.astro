@@ -16,6 +16,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
+  <Fragment slot="footer"></Fragment>
   <Fragment slot="header">
     <Header
       links={[
@@ -45,6 +46,10 @@ const metadata = {
       { variant: 'primary', text: 'Contact Me', href: '#contact' },
       { text: 'View Projects', href: '#projects' },
     ]}
+    image={{
+      src: '~/assets/images/profile.png',
+      alt: 'Park Dong Jin Profile',
+    }}
   >
     <Fragment slot="subtitle">
       <span class="text-primary font-semibold">Hello, I'm</span><br />
@@ -57,7 +62,7 @@ const metadata = {
   <!-- About Section -->
   <Content
     id="about"
-    columns={3}
+    columns={1}
     items={[
       {
         icon: 'tabler:mail',
@@ -84,13 +89,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 text-center">
         <span class="text-primary">About</span> Me
       </h2>
-      <p class="mb-4">
+      <p class="mb-4 text-center">
         협업을 통한 의사소통과 프로젝트의 주안점에 대해 항상 신경쓰고 있습니다.
       </p>
-      <p class="mb-4">
+      <p class="mb-4 text-center">
         듣고 배우는것보다, 직접 해보면서 부딪히는 것이 가장 큰 자산임을 체험했습니다.
         개발자는 공부와 발전을 멈춰선 안된다는 교훈을 항상 마음에 새기고 있습니다.
       </p>
@@ -176,6 +181,7 @@ const metadata = {
   <Content
     id="projects"
     isReversed
+    columns={1}
     items={[
       {
         title: 'Summary',
@@ -202,6 +208,7 @@ const metadata = {
   <Content
     isReversed
     isAfterContent={true}
+    columns={1}
     items={[
       {
         title: 'Summary',
@@ -228,6 +235,7 @@ const metadata = {
   <Content
     isReversed
     isAfterContent={true}
+    columns={1}
     items={[
       {
         title: 'Summary',
@@ -254,6 +262,7 @@ const metadata = {
   <Content
     isReversed
     isAfterContent={true}
+    columns={1}
     items={[
       {
         title: 'Summary',
