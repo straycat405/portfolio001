@@ -6,7 +6,6 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Park Dong Jin - Web Full-Stack Developer',
@@ -52,10 +51,15 @@ const metadata = {
     }}
   >
     <Fragment slot="subtitle">
-      <span class="text-primary font-semibold">Hello, I'm</span><br />
-      KH정보교육원 Java 웹 개발과정 수료 후 (주)빅팀아이앤씨에서 연구원으로 근무하며 다양한 경험을 쌓았습니다.<br /><br />
-      다양한 이력과 경험을 바탕으로 폭넓은 분야를 아우르는 도메인 지식과 업무 분야를 지니고 있습니다.
-      건축적 사고와 디자인적 감각을 베이스로 한 정량적인 설계, 합리적인 디자인을 생각합니다.
+      KH정보교육원 Java 웹 개발과정 수료 후 (주)빅팀아이앤씨에서 연구원으로 근무하며 다양한 경험을 쌓았습니다.<br /><br
+      />
+      다양한 이력과 경험을 바탕으로 폭넓은 분야를 아우르는 도메인 지식과 업무 분야를 지니고 있습니다.<br /><br
+      />
+      건축적 사고와 디자인적
+      감각을 베이스로 한 정량적인 설계, 합리적인 디자인을 생각합니다.
+      <br /><br
+      />
+      협업을 위한 의사소통과 프로젝트의 주안점에 대해 항상 신경쓰고 있습니다.
     </Fragment>
   </Hero>
 
@@ -90,15 +94,8 @@ const metadata = {
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 text-center">
-        <span class="text-primary">About</span> Me
+        <span class="text-primary">Contact</span> Me
       </h2>
-      <p class="mb-4 text-center">
-        협업을 통한 의사소통과 프로젝트의 주안점에 대해 항상 신경쓰고 있습니다.
-      </p>
-      <p class="mb-4 text-center">
-        듣고 배우는것보다, 직접 해보면서 부딪히는 것이 가장 큰 자산임을 체험했습니다.
-        개발자는 공부와 발전을 멈춰선 안된다는 교훈을 항상 마음에 새기고 있습니다.
-      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -116,7 +113,7 @@ const metadata = {
     items={[
       {
         title: 'Front-End',
-        description: 'Javascript, React, JSP, HTML5, Bootstrap, TailwindCSS, jQuery, Ajax, Axios',
+        description: 'Javascript, Typescript, React, JSP, HTML5, TailwindCSS, jQuery, Ajax, Axios',
         icon: 'tabler:browser',
       },
       {
@@ -126,12 +123,12 @@ const metadata = {
       },
       {
         title: 'Database',
-        description: 'PostgreSQL, MySQL, Supabase, OracleDB, MariaDB',
+        description: 'PostgreSQL, MySQL, MariaDB,Supabase, Firebase',
         icon: 'tabler:database',
       },
       {
         title: 'Etc',
-        description: 'Git, SVN, Notion, Redmine, Windows OS, Mac OS, JBoss, WildFly',
+        description: 'Git, SVN, Notion, Redmine, Windows OS, Mac OS, JBoss, WildFly, Adobe Photoshop, Figma',
         icon: 'tabler:tools',
       },
     ]}
@@ -144,32 +141,38 @@ const metadata = {
     subtitle="경력 및 학력 사항"
     items={[
       {
-        title: '(주)Bigteam INC <br /> <span class="font-normal text-muted">융합기술사업팀 연구원 - 응용SW개발</span> <br /> <span class="text-sm font-normal text-primary">2024.09 - 2025.06</span>',
-        description: `표준프레임워크 웹사이트 유지보수 · Java Spring 백엔드 개발 · LLM 챗봇 프론트엔드 개발 · 기타 제안사업 목업페이지 담당 (Figma)`,
+        title:
+          '(주)Bigteam INC <br /> <span class="font-normal text-muted">융합기술사업팀 연구원 - 응용SW개발</span> <br /> <span class="text-sm font-normal text-primary">2024.09 - 2025.06</span>',
+        description: `표준프레임워크 웹사이트 유지보수 · Java Spring 백엔드 개발 · LLM 챗봇 프론트엔드 개발 · 기타 제안사업 목업페이지 담당 (Figma) 외`,
         icon: 'tabler:briefcase',
       },
       {
-        title: 'KH정보교육원 <br /> <span class="font-normal text-muted">공공데이터 융합 자바개발자 양성과정 수료</span> <br /> <span class="text-sm font-normal text-primary">2023.11 - 2024.04</span>',
+        title:
+          'KH정보교육원 <br /> <span class="font-normal text-muted">공공데이터 융합 자바개발자 양성과정 수료</span> <br /> <span class="text-sm font-normal text-primary">2023.11 - 2024.04</span>',
         description: `팀프로젝트 웹 가계부 개발 - 팀장`,
         icon: 'tabler:certificate',
       },
       {
-        title: '서울사이버대학교 <br /> <span class="font-normal text-muted">대학 총무업무 / 공사감독 / 각종 도면 작업 외</span> <br /> <span class="text-sm font-normal text-primary">2023.02 - 2023.11</span>',
+        title:
+          '서울사이버대학교 <br /> <span class="font-normal text-muted">대학 총무업무 / 공사감독 / 각종 도면 작업 외</span> <br /> <span class="text-sm font-normal text-primary">2023.02 - 2023.11</span>',
         description: `시설 관리 및 도면 작업 담당`,
         icon: 'tabler:briefcase',
       },
       {
-        title: '건국대학교 <br /> <span class="font-normal text-muted">건축학부 졸업 (학사편입)</span> <br /> <span class="text-sm font-normal text-primary">2020.03 - 2022.02</span>',
+        title:
+          '건국대학교 <br /> <span class="font-normal text-muted">건축학부 졸업 (학사편입)</span> <br /> <span class="text-sm font-normal text-primary">2020.03 - 2022.02</span>',
         description: `건축 설계 및 디자인 전공`,
         icon: 'tabler:school',
       },
       {
-        title: '(주)라이브플랜 <br /> <span class="font-normal text-muted">3dsmax 건축 모델링 및 2d 리터칭 작업</span> <br /> <span class="text-sm font-normal text-primary">2018.01 - 2019.04</span>',
+        title:
+          '(주)라이브플랜 <br /> <span class="font-normal text-muted">3dsmax 건축 모델링 및 2d 리터칭 작업</span> <br /> <span class="text-sm font-normal text-primary">2018.01 - 2019.04</span>',
         description: `건축 시각화 작업`,
         icon: 'tabler:briefcase',
       },
       {
-        title: '서울예술대학교 <br /> <span class="font-normal text-muted">실내디자인과 졸업</span> <br /> <span class="text-sm font-normal text-primary">2012.03 - 2018.02</span>',
+        title:
+          '서울예술대학교 <br /> <span class="font-normal text-muted">실내디자인과 졸업</span> <br /> <span class="text-sm font-normal text-primary">2012.03 - 2018.02</span>',
         description: `실내 디자인 전공`,
         icon: 'tabler:school',
       },
@@ -182,10 +185,15 @@ const metadata = {
     id="projects"
     isReversed
     columns={1}
+    image={{
+      src: '~/assets/images/project001.png',
+      alt: 'WFL project',
+    }}
     items={[
       {
         title: 'Summary',
-        description: 'KH정보교육원 수요 팀프로젝트 · 팀 리더로 작업 총괄 · AWS EC2 서버 개발 및 구동 · 기본 회원/소셜 로그인 연동/관리자 기능 구현 · 휴대폰 문자 인증 기능',
+        description:
+          'KH정보교육원 수료 팀프로젝트 · 팀 리더로 작업 총괄 · AWS EC2 서버 개발 및 구동 · 기본 회원 / 소셜 로그인 연동 / 관리자 기능 구현 · 휴대폰 문자 인증 기능',
       },
       {
         title: 'Tech Stack',
@@ -195,7 +203,8 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        <span class="text-primary">PROJECT 001</span> <span class="text-sm text-muted">2024.01 - 2024.04</span>
+        <span class="text-primary">PROJECT 001</span>
+        <span class="text-sm text-muted">2024.01 - 2024.04</span>
         <br /><span class="text-xl">웹 가계부 서비스 (WFL)</span>
       </h3>
     </Fragment>
@@ -209,10 +218,15 @@ const metadata = {
     isReversed
     isAfterContent={true}
     columns={1}
+    image={{
+      src: '~/assets/images/project002.png',
+      alt: 'HCS project',
+    }}
     items={[
       {
         title: 'Summary',
-        description: '현충시설정보서비스 웹사이트 유지보수 및 기능개발 · 국내, 해외 현충시설 DB 자료 최신화 · 구글 map API 연동을 통한 좌표 표시 · 관리자페이지 구축',
+        description:
+          '현충시설정보서비스 웹사이트 유지보수 및 기능개발 · 국내, 해외 현충시설 DB 자료 최신화 · 구글 map API 연동을 통한 좌표 표시 · 관리자페이지 구축',
       },
       {
         title: 'Tech Stack',
@@ -222,8 +236,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        <span class="text-primary">PROJECT 002</span> <span class="text-sm text-muted">2024.10 - 2025.01</span>
-        <br /><span class="text-xl">국가보훈부 현충시설정보서비스</span>
+        <span class="text-primary">PROJECT 002</span>
+        <span class="text-sm text-muted">2024.10 - 2025.01</span>
+        <br /><span class="text-xl">국가보훈부 현충시설정보서비스 유지보수</span>
       </h3>
     </Fragment>
 
@@ -236,10 +251,15 @@ const metadata = {
     isReversed
     isAfterContent={true}
     columns={1}
+    image={{
+      src: '~/assets/images/project003.png',
+      alt: 'RRamy project',
+    }}
     items={[
       {
         title: 'Summary',
-        description: '데일리 이벤트를 메인으로 하는 앱 개발 · 기획 및 Figma 목업 디자인, 개발 수행 · 일반 사용자와 사업자로 구분 · 사업자는 기프티콘, 쿠폰 제작 및 발송',
+        description:
+          '알람 및 데일리 이벤트를 메인으로 하는 앱 개발 · 기획 및 Figma 목업 디자인, 개발 수행 · 일반 사용자와 사업자로 구분 · 사업자는 기프티콘, 쿠폰 제작 및 발송',
       },
       {
         title: 'Tech Stack',
@@ -249,7 +269,8 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        <span class="text-primary">PROJECT 003</span> <span class="text-sm text-muted">2025.01 - 2025.04</span>
+        <span class="text-primary">PROJECT 003</span>
+        <span class="text-sm text-muted">2025.01 - 2025.04</span>
         <br /><span class="text-xl">RRamy - 알람/데일리 이벤트 앱</span>
       </h3>
     </Fragment>
@@ -263,21 +284,27 @@ const metadata = {
     isReversed
     isAfterContent={true}
     columns={1}
+    image={{
+      src: '~/assets/images/project004.png',
+      alt: 'LLM project',
+    }}
     items={[
       {
         title: 'Summary',
-        description: 'LLM 기반 멀티모달 챗봇 기획 · 기초 프로세스 기획 · 제안 팸플릿 작업 · 제안발표 시연을 위한 프로토타입 개발',
+        description:
+          'LLM 기반 멀티모달 챗봇 기획 · 기초 프로세스 기획 · 제안 팸플릿 작업 · 제안발표 시연을 위한 프로토타입 개발',
       },
       {
         title: 'Tech Stack',
-        description: 'Back-End: Spring | Front-End: JSP | Database: PostgreSQL (VectorDB)',
+        description: 'Back-End: Spring | Front-End: JSP | Database: PostgreSQL',
       },
     ]}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        <span class="text-primary">PROJECT 004</span> <span class="text-sm text-muted">2025.04 - 2025.06</span>
-        <br /><span class="text-xl">BTLLM - 한국은행 LLM 솔루션</span>
+        <span class="text-primary">PROJECT 004</span>
+        <span class="text-sm text-muted">2025.04 - 2025.06</span>
+        <br /><span class="text-xl">BTLLM - 한국은행 LLM 솔루션 사업 입찰제안</span>
       </h3>
     </Fragment>
 
@@ -286,24 +313,4 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Contact Section -->
-  <CallToAction
-    id="contact"
-    title="Contact Me"
-    subtitle="프로젝트 협업이나 채용 관련 문의를 환영합니다."
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Email 보내기',
-        href: 'mailto:straycat405@gmail.com',
-        icon: 'tabler:mail',
-      },
-      {
-        text: 'GitHub 방문',
-        href: 'https://github.com/straycat405',
-        target: '_blank',
-        icon: 'tabler:brand-github',
-      },
-    ]}
-  />
 </Layout>
